@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color-flipper</title>
+    <style>
+        body{
+            background-color: rgb(47, 30, 65);
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">click me!</button>
+    <script>
+let btn = document.querySelector("#btn");
+
+let randomColor = ()=>{
+    let val1 = Math.ceil(Math.random() * 256);
+    let val2 = Math.ceil(Math.random() * 256);
+    let val3 = Math.ceil(Math.random() * 256);
+
+    return `rgb(${val1}, ${val2}, ${val3})`;
+};
+
+btn.addEventListener("click",()=>{
+
+document.body.style.backgroundColor = randomColor();
+})
+    </script>
+</body>
+</html>
